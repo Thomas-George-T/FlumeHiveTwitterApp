@@ -23,23 +23,23 @@ flume-ng agent -n TwitterAgent -f $FLUME_CONF_DIR/twitter.conf
 ```
 hdfs dfs -cat /user/flume/tweets/FlumeData.* | head
 ```
-5. Copy and then save the schema in a file called TwitterDataAvroSchema.avsc
+5. Copy and then save the schema in a file called `TwitterDataAvroSchema.avsc`
 6. Edit the file for readability.
-7. Write a hql file called avrodataread.hql to create table tweets using the AvroSerDe, mention the avro schema file in the tblproperties.
+7. Write a hql file called `avrodataread.hql` to create table tweets using the AvroSerDe, mention the avro schema file in the tblproperties.
 8. Execute the file in terminal
 ```
 hive -f FlumeHiveTwitterApp/Hive scripts/create_tweets_avro_table.hql/avrodataread.hql
 ```
-9. To create a table for processing using pig or for visualization, use the file named create_tweets_avro_table.hql and execute it.
+9. To create a table for processing using pig or for visualization, use the file named `create_tweets_avro_table.hql` and execute it.
 ```
 hive -f FlumeHiveTwitterApp/Hive scripts/create_tweets_avro_table.hql
 ```
 10. Clean using pig.
 
 ## To Do (Remaining for completion)
-* Get Twitter App Credentials :white_check_mark:
-* Set up twitter.config :white_check_mark:
-* Write hql using AvroSerde to store tweets. :white_check_mark:
-* Process and clean the data using Pig
-* Include references and related links >> Readme.md
-* Update Readme.md 
+- [x] Get Twitter App Credentials 
+- [x] Set up twitter.config 
+- [x] Write hql using AvroSerde to store tweets. 
+- [ ] Process and clean the data using Pig
+- [ ] Include references and related links 
+

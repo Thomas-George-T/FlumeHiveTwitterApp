@@ -28,7 +28,7 @@ hdfs dfs -cat /user/flume/tweets/FlumeData.* | head
 7. Write a hql file called `avrodataread.hql` to create table tweets using the AvroSerDe, mention the avro schema file in the tblproperties.
 8. Execute the file in terminal
 ```
-hive -f FlumeHiveTwitterApp/Hive scripts/create_tweets_avro_table.hql/avrodataread.hql
+hive -f FlumeHiveTwitterApp/Hive scripts/avrodataread.hql
 ```
 9. To create a table for processing using pig or for visualization, use the file named `create_tweets_avro_table.hql` and execute it.
 ```

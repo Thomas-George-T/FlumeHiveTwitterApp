@@ -4,7 +4,7 @@
 <p align="center">  
 	<br>
 		<a href="#">
-        	<img height=100 src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Apache_Hive_logo.svg"> 
+        	<img height=200 src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Apache_Hive_logo.svg"> 
     	</a>
 	<br>
 </p>
@@ -14,9 +14,9 @@ We ingest Twitter feed using Flume. The tweets will be stored in the avro schema
 
 ## Components
 * [twitter.conf](twitter.conf) is used to store all the configurations required for ingesting tweets
-* [TwitterDataAvroSchema.avsc](FlumeHiveTwitterApp/Hive%20scripts/TwitterDataAvroSchema.avsc) contains the avro schema.
-* [avrodataread.q](FlumeHiveTwitterApp/Hive%20scripts/avrodataread.q) is used to create a staging table with avro Serde.
-* [create_tweets_avro_table.q](FlumeHiveTwitterApp/Hive%20scripts/create_tweets_avro_table.q) is used to create a processing table with well defined DDL's.
+* [TwitterDataAvroSchema.avsc](Hive%20scripts/TwitterDataAvroSchema.avsc) contains the avro schema.
+* [avrodataread.q](Hive%20scripts/avrodataread.q) is used to create a staging table with avro Serde.
+* [create_tweets_avro_table.q](Hive%20scripts/create_tweets_avro_table.q) is used to create a processing table with well defined DDL's.
 
 ## Prerequisites
 To run this software you need the following:

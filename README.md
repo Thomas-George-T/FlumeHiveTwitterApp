@@ -10,7 +10,7 @@
 </p>
 
 ## Description
-We ingest Twitter feed using Flume. The tweets will be stored in the avro schema. To use this data, we create tables using AvroSerde in Hive. Once created this data can be cleansed using tools like OpenRefine,Pig etc. The cleansed data can then be used for visualization.
+This project streams/ingest Twitter feed using Flume. The tweets are stored in a Hive data lake using Avro format. This data can be cleansed using tools like OpenRefine, Pig etc. The cleansed data can then be used for visualization.
 
 ## Components
 * [twitter.conf](twitter.conf) is used to store all the configurations required for ingesting tweets
@@ -57,6 +57,6 @@ To run this software you need the following:
 	hive -f FlumeHiveTwitterApp/Hive scripts/create_tweets_avro_table.q
 	```
 
-10. Clean using tools like pig,OpenRefine etc.
+10. Clean using tools like pig, OpenRefine etc.
 
-11. Visualize the data into a dashboard using tools like tablaeu,d3.js etc.
+11. Visualize the data into a dashboard using tools like tablaeu, d3.js etc.
